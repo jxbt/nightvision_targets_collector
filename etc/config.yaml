@@ -1,0 +1,19 @@
+subdomain_discovery:
+  tools: ["sublist3r","amass-passive","gobuster","subfinder"] 
+  # ["sublist3r","virustotal","amass-passive","amass-active","gobuster","subfinder"]
+  threads:
+    gobuster: 150
+  
+  api_keys:
+    virustotal: "" # virustotal api key.
+  
+  wordlists:
+    gobuster: "subdomain_prefixes_default.txt"
+
+
+web_discovery:
+  threads: 150
+  retries: 2
+  web_ports: "80,443,8000,8081"
+  timeout: 7
+  rate_limit: 200
